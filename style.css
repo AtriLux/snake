@@ -1,0 +1,95 @@
+body {
+    background-color: grey;
+    color: white;
+}
+#field {
+    position: relative;
+    background-color: dimgray;
+    height: 600px;
+    width: 600px;
+}
+.cell {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 0%;
+    color: dimgray;
+    font-size: 1px;
+}
+#faq {
+    position: relative;
+    display: none;
+}
+#points {
+    position: relative;
+    display: none;
+    font: bolder 20px Calibri;
+    height: 0px;
+    width: 0px;
+    user-select: none;
+}
+#reset {
+    margin-top: 10px;
+    width: 80px;
+    height: 20px;
+    background-color: dimgray;
+    position: fixed;
+    border: 5px solid white;
+    text-align: center;
+    font: bold small-caps 15px Calibri;
+    display: none;
+    user-select: none;
+}
+.wall {
+    background-color: white;
+    color: white;
+}
+.berry {
+    background-color: crimson;
+    border-radius: 100%;
+}
+.snakeBody {
+    background-color: lightgreen;
+    color: lightgreen;
+    font-size: 5px;
+    border-radius: 0%;
+}
+.snakeHeadLeft {
+    background-color: lightgreen;
+    border-top-left-radius: 80%;
+    border-bottom-left-radius: 80%;
+}
+.snakeHeadRight {
+    background-color: lightgreen;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 80%;
+}
+.snakeHeadUp {
+    background-color: lightgreen;
+    border-top-right-radius: 80%;
+    border-top-left-radius: 80%;
+}
+.snakeHeadDown {
+    background-color: lightgreen;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+}
+.snakeHeadUp::before, .snakeHeadUp::after,
+.snakeHeadDown::before, .snakeHeadDown::after,
+.snakeHeadRight::before, .snakeHeadRight::after,
+.snakeHeadLeft::before, .snakeHeadLeft::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    border: 2px solid black;
+}
+.snakeHeadUp::before {top: 5px; left: 5px;}
+.snakeHeadUp::after {top: 5px; left: 20px;}
+.snakeHeadDown::before {top: 20px; left: 5px;}
+.snakeHeadDown::after {top: 20px; left: 20px;}
+.snakeHeadRight::before {top: 20px; left: 20px;}
+.snakeHeadRight::after {top: 5px; left: 20px;}
+.snakeHeadLeft::before {top: 5px; left: 5px;}
+.snakeHeadLeft::after {top: 20px; left: 5px;}
